@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <link href="home page.css" rel="stylesheet" type="text/css">
+  <link href="stuck.css" rel="stylesheet" type="text/css">
+  <script src="home page.js"></script>
+ <script  src="blog.js"></script> 
+ <link href="blog.css" rel="stylesheet" type="text/css">
+ <link href="demo.css" rel="stylesheet" type="text/css">
+ <link href="animate.min.css" rel="stylesheet">
+ 
+
+ 
+ <script>
+ 
+ $(document).ready(function(){ /* to make sure the script runs after page load */
+
+    $("#read_more").click(function(){ /* find all a.read_more elements and bind the following code to them */
+      //$("#read_more").text("read less");
+	  $("#read_more").text("read more");
+	  
+      $("#more_text").toggle();
+    });
+	
+	 $("#read_more1").click(function(){ /* find all a.read_more elements and bind the following code to them */
+
+      $("#more_text1").toggle();
+    });
+$("#read_more2").click(function(){ /* find all a.read_more elements and bind the following code to them */
+
+      $("#more_text2").toggle();
+    });
+	
+    $("#read_more3").click(function(){ /* find all a.read_more elements and bind the following code to them */
+
+      $("#more_text3").toggle();
+    });
+$("#read_more4").click(function(){ /* find all a.read_more elements and bind the following code to them */
+
+      $("#more_text4").toggle();
+    });
+	
+	
+ $("#email").click(function(){
+ 
+ $(this).css("background-color","#fed9b4");
+ });
+ 
+ 	
+ 
+});
+
+
+
+
+
+</script>
+
+ 
+ <script>
+	var app = angular.module('Lab8',[]);
+	
+	app.controller("UserController", function() {
+		this.userAccount = users;
+	});
+	
+	app.controller("AddController", function() {
+		this.userAccount = {};
+		
+		this.addUser = function(newUser) {
+			newUser.push(this.userAccount);
+			this.userAccount={};
+		};
+	});
+	
+app.controller('datCtrl', function($scope) {
+    $scope.today = new Date();
+});
+	
+	var users = [{
+		firstname:'Shraddha nahar ',
+		email:'sha2@gmail.com',
+		
+	    comments:' delicious dishes :-)',
+		
+	
+	}];
+	
+</script>
+
+<script>
+function myFun(){
+    alert("Your recipe has been saved successfully");
+}
+
+</script>
+
+  
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="homepage.html"><img class="img-responsive" src="Images/logo.png"></img></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="aboutus.html">ABOUT</a></li>
+        <li><a href="Menu.html">MENU</a></li>
+        <li><a href="blog.html">FOOD BLOG</a></li>
+        <li><a href="careers.html">CAREERS</a></li>
+		<li><a href="contact.html">CONTACT</a></li>
+		<li><a href="#mySignUpModal" data-toggle="modal" data-target="#mySignUpModal"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
+     <li><a href="#myLoginModal" data-toggle="modal" data-target="#myLoginModal"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+		 <li><a href="Add to Cart.html" ><span class="glyphicon glyphicon-shopping-cart" style="font-size:20px"></span></a></li>
+		
+		</ul>
+    </div>
+  </div>
+</nav>
+<!-- Login Modal -->
+<div id="myLoginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+   <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="post" >
+  <div class="form-group">
+    <label for="Username">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" name="Username">
+  </div>
+  <div class="form-group">
+    <label for="Password">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" name="Password">
+  </div>
+  <button name="Submit" type="submit" class="btn btn-default" id="loginButton">Login</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>	
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Sign up Modal -->
+<div id="mySignUpModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" id="closeButton">&times;</button>
+        <h4 class="modal-title">Sign up!</h4>
+      </div>
+      <div class="modal-body">
+        <form autocomplete="on" method="get">
+	 <div class="form-group">
+    <label for="firstname">First Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="firstname">
+  </div>
+	<div class="form-group">
+    <label for="lastname">Last Name<b class="txtred">*</b>:</label>
+    <input type="text" class="form-control" id="lastname">
+  </div>
+  <div class="form-group">
+    <label for="regEmail">Email address<b class="txtred">*</b>:</label>
+    <input type="email" class="form-control" id="regEmail"> <br>
+	<span id="emailSpan" class="txtred"> </span>
+  </div>
+  <div class="form-group">
+    <label for="pass">Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="pass"> <br>
+	<span id="passSpan" class="txtred"> </span>
+  </div>
+	<div class="form-group">
+    <label for="confirmpass">Confirm Password<b class="txtred">*</b>:</label>
+    <input type="password" class="form-control" id="confirmpass"> <br>
+	<span id="confirmPassSpan" class="txtred"> </span>
+  </div>
+  <button type="submit" class="btn btn-default" id="registerUser">Sign up</button>
+	<span id="warning1" class="txtred"> </span>
+	<br><span id="registerSuccess" > </span>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="closeButton">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="container-fluid jumbotron " style="background-image:url('Images/blog.jpg');background-repeat:no-repeat;background-size:cover;">
+<h1 class="text-center" style="color:#892c3d ">Food Art</h1>
+
+</div>
+
+<div class="container">
+
+  <div class="col-sm-8">
+  
+		
+		
+		<div class="row">
+		<div class="col-sm-12">
+          <div class="well" id="pol">
+		  
+		
+		 
+		  	
+		  <div class="row">
+		<div id="wrapper">
+	
+	<div class="col-sm-4">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-fade">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" id="imageslide1">
+   
+
+    <div class="item active">
+      <img src="Images/d12.jpg" alt="Chania" width="100%" height="200px"  id="myImg1" data-toggle="modal" data-target="#myMod" data-animation="animated lightSpeedIn">
+    </div>
+
+    <div class="item">
+      <img src="Images/d13.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+
+    <div class="item">
+      <img src="Images/d14.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	 <div class="item">
+      <img src="Images/d15.jpg" alt="Flower" width="100%"  height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	</div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		 
+		  
+<div class="text1" data-animation="animated lightSpeedIn">Check it's nutritional value</div>
+		  
+		  
+		  </div>
+		  </div>
+		  <div class="col-sm-8">
+		  
+		  <h2 data-animation="animated bounceInLeft">White Bean & Spinach Soup</h2>
+		  
+		  
+		 
+		
+		 
+             <p>Despite being only 132 calories per serve, this delicious and nutritious soup is very filling thanks to the cannellini beans and baby potatoes.</img> <bt><br/>
+    <p id="read_more">Read More</p></p><br/>
+
+    <p id="more_text" style="display:none">
+	
+        Ingredients
+
+1 tbsp. olive oil<br>
+1 can cannellini beans, drained and rinsed<br>
+2 celery stalks<br>
+3 cloves garlic<br>
+4 cups vegetable stock<br>
+1 bay leaf<br>
+Handful fresh basil leaves<br>
+500g baby spinach leaves or kale<br>
+1 onion, diced<br>
+2-3 baby potatoes, skin on, chopped<br>
+1/2 lemon rind<br>
+Sprinkle rosemary<br>
+
+Method
+
+1)Heat pot with olive oil and sauté onion and celery until softened, approx 5 mins.<br>
+2)  Add garlic and continue to stir for an additional minute.<br>
+3)Add stock, potatoes, bay leaf, rosemary, season with S & P and let simmer until potatoes have cooked. Grate a little lemon rind into the soup.<br>
+4)Add basil, spinach and beans; simmer on low heat for 5 minutes.<br>
+5)Once all cooked you have option to blend for a smooth pureed soup or leave chunky.<br>
+
+    </p>
+
+          </div>
+		  </div>
+		  
+		  </div>
+        </div>
+		
+		<div class="col-sm-12">
+          <div class="well" id="hol">
+		   
+		    <br>
+			
+			
+			
+				  	
+		  <div class="row">
+		<div id="wrapper">
+	
+	<div class="col-sm-4">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-fade">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" id="imageslide1">
+   
+
+    <div class="item active">
+      <img src="Images/d21.jpg" alt="Chania" width="100%" height="200px"  id="myImg1" data-toggle="modal" data-target="#myMod" data-animation="animated lightSpeedIn">
+    </div>
+
+    <div class="item">
+      <img src="Images/d22.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+
+    <div class="item">
+      <img src="Images/d23.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	 <div class="item">
+      <img src="Images/d24.jpg" alt="Flower" width="100%"  height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	</div>
+  </div>
+  <!-- Left and right controls -->
+    <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		 
+		  
+<div class="text1">Check it's nutritional value</div>
+		  
+		  
+		  </div>
+		  </div>
+		  <div class="col-sm-8">
+		  <h2>Carrot Oat and Walnut Muffins</h2>
+		  
+		  
+		 
+		
+		 
+             <p>Despite being only 132 calories per serve, this delicious and nutritious soup is very filling thanks to the cannellini beans and baby potatoes.</img> <bt><br/>
+    <p id="read_more1">Read More</p></p><br/>
+
+    <p id="more_text1" style="display:none">
+	
+        Ingredients
+
+1 (60g) small carrot, grated<br>
+1 tbsp. chopped walnuts<br>
+1 egg<br>
+2 tbsp. brown sugar<br>
+1 tsp. cinnamon<br>
+1 cup SR flour<br>
+½ cup milk<br>
+2 (40g) tbsp. butter<br>
+2 tbsp. rolled oats<br>
+4 tbsp. Greek yoghurt
+
+Method
+
+1)Preheat oven to 180 degrees (160 fan forced).<br>
+2In a mixing bowl sift your flour and cinnamon together and mix in the brown sugar and oats.<br>
+3)In a cup place your egg and milk and whisk with a fork. Melt your butter in microwave for 30 seconds. Place your egg mixture with flour and stir with a spoon then add the butter..<br>
+4)Now combine the grated carrot, walnuts, and yoghurt and stir until all incorporated. It should be a thick batter but if too thick add a little more yoghurt.<br>
+5)Divide mixture evenly into your patty pans or muffin tin. If you are making mini muffins then bake for 12 minutes and normal sized muffins 20-25 minutes. Half way through baking an option is to sprinkle some oats on top of muffins. Check with a skewer, take out and let cook on a wire rack.
+
+    </p>
+
+          </div>
+		  </div>
+			
+			
+			
+			
+			 </div>
+		   </div>
+		  
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		
+		<div class="col-sm-12">
+          <div class="well"  id="pol">
+		    <br>
+			  <div class="row">
+		<div id="wrapper">
+	
+	<div class="col-sm-4">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-fade">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" id="imageslide1">
+   
+
+    <div class="item active">
+      <img src="Images/s12.jpg" alt="Chania" width="100%" height="200px"  id="myImg1" data-toggle="modal" data-target="#myMod" data-animation="animated bounceInTop">
+    </div>
+
+    <div class="item">
+      <img src="Images/s13.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+
+    <div class="item">
+      <img src="Images/s14.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	 <div class="item">
+      <img src="Images/s15.jpg" alt="Flower" width="100%"  height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	</div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		  
+		  <div class="text1">Check it's nutritional value</div>
+		  </div>
+		  </div>
+		  
+		  
+		   <div class="col-sm-8">
+		  <h2>Spanish Stuffed Potatoe</h2>
+		  
+		  
+		 
+		
+		 
+             
+		 <p>With only 210 calories, this is a great lunch or BBQ dish that will keep you going all afternoon. Make ahead of time and place on BBQ for a few minutes.<br/>
+    <p id="read_more2">Read More</p></p><br/>
+
+
+  
+	
+		  
+		  
+	
+
+    <p id="more_text2" style="display:none">
+	
+        Ingredients
+
+2 medium potatoes (2 x 150g)<br>
+2 tsp. Cream Cheese<br>
+20g chorizo (about 2cm)<br>
+50g sliced mushrooms<br>
+20g baby spinach leaves<br>
+20g red capsicum, diced<br>
+2 tsp. olive oil<br>
+Sprinkle oregano<br>
+Salt and pepper to taste<br>
+
+Method
+
+1)Pierce potatoes with a skewer, about 5 times each potato.<br>
+ 2)Microwave for 8-10 minutes or until softened. Place on a plate and set aside to cool slightly.<br>
+3)Meanwhile in a small non-stick fry pan heat olive oil, sauté capsicum and chorizo for a couple of minutes.<br>
+ 4)Add mushrooms and sprinkle with oregano, cooking a further couple of minutes until mushrooms have collapsed.<br> 
+ 5)Add spinach, stirring until wilted, then season with salt and pepper once cooked, take off heat.<br>
+6)Slice top of each potato and scoop out ¾ of the potato with a teaspoon. <br>
+7)Place the scooped potato into a bowl with the sautéed filling, mix with cream cheese and place back into potato. <br>
+8)You can either eat as is or you can heat back up in microwave for 30 seconds to 1 minute or crisp up on the oven for 10 minutes on 180C.
+    </p>
+           </div>
+        </div>
+		</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="col-sm-12">
+          <div class="well" id="hol">
+		   
+		  
+		  <div class="row">
+		<div id="wrapper">
+	
+		  
+	<div class="col-sm-4">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-fade">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" id="imageslide1">
+   
+
+    <div class="item active">
+      <img src="Images/k12.jpg" alt="Chania" width="100%" height="200px"  id="myImg1" data-toggle="modal" data-target="#myMod" data-animation="animated bounceInTop">
+    </div>
+
+    <div class="item">
+      <img src="Images/k13.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+
+    <div class="item">
+      <img src="Images/k14.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	 <div class="item">
+      <img src="Images/k15.jpg" alt="Flower" width="100%"  height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	</div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		  
+		  <div class="text1">Check it's nutritional value</div>
+		  </div>
+		  
+		  </div>
+		   <div class="col-sm-8">
+	
+		<h2>Mushroom Ratatouille</h2>
+		 <p>This is a vegan friendly dinner that everyone should love. Quick and easy to make and so healthy. Use any type of mushroom you like.<br/>
+    <p id="read_more3">Read More</p></p><br/>
+
+    <p id="more_text3" style="display:none">
+        Ingredients
+
+4 large field or Portobello mushrooms, sliced chunky<br>
+½ onion, sliced chunky<br>
+1 clove garlic, crushed<br>
+½ red capsicum, sliced chunky<br>
+Sprinkle of oregano<br>
+¼ cup vegetable stock<br>
+Salt and pepper to taste<br>
+1 fresh tomato, chopped<br>
+2 tbsp. balsamic vinegar<br>
+1 tbsp. olive oil<br>
+Method
+
+1)Boil your kettle with water. In a bowl add your couscous, hot water, season with salt and pepper. Place cling wrap over bowl and let sit for a couple of minutes until the water has been absorbed. Take off cling film and squeeze your lemon then fluff with fork, set aside.<br>
+2)In a non-stick fry pan heat your olive oil on medium heat. Add onion and capsicum and stir until cooked. Add mushrooms, season with salt and pepper to taste, cooking a further minute or two until mushrooms have started to collapse. Now add garlic and tomato, sprinkle oregano over, drizzle your balsamic vinegar and vegetable stock. Check to see if you need more seasoning. Let simmer on low heat for a couple of minutes.<br>
+3)Serve with your couscous.   
+   </p>
+          </div>
+        </div>
+		</div>
+		</div>
+		  
+		   
+		   
+		   
+	
+		
+		  	   
+		   
+		   
+		   
+		   
+		   
+		   
+		     
+		   <!-- Modal -->
+		   
+  <div class="modal fade_in" id="myMod" role="dialog" >
+    <div class="modal-dialog2" >
+    
+      <!-- Modal content-->
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title2">See what your food contains</h4></center>
+        </div>
+        <div class="modal-body2">
+		
+		  <div class="table-responsive">
+		  
+		 <table border="1" align="center" id="t1" class=" ">
+		 <thead><center>NUTRITION TABLE</center></thead>
+		 <thead><center>Servings:6   Serving size:380g</center></thead>
+		 <tbody>
+		 <th>  </th>
+		 <th>Average serve</th>
+		  <th>Average 100g</th>
+		 <tr>
+		 <td>Energy</td>
+		 <td>553KJ</td>
+		 <td>145KJ</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Calories</td>
+		 <td>132cal</td>
+		 <td>35cal</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Protein</td>
+		 <td>7.4g</td>
+		 <td>2.0g</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Fat total</td>
+		 <td>3.1g</td>
+		 <td>0.8</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>-saturated</td>
+		 <td>0.5g</td>
+		 <td>0.1g</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Carbohydrates</td>
+		 <td>14.5g</td>
+		 <td>3.8</td>
+		 
+		 
+		 </tr>		 
+		 <tr>
+		 <td>Sugars</td>
+		 <td>3.7g</td>
+		 <td>1.0g</td>
+		 
+		 
+		 </tr>		 
+		 <tr>
+		 <td>sodium</td>
+		 <td>480mg</td>
+		 <td>126mg</td>
+		 
+		 
+		 </tr>		 
+		 
+
+		 </tbody>
+		 </table>
+		  
+		  </div>
+        </div>
+        <div class="modal-footer2">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+		  
+
+                 <div id="myModal1" class="modal1">
+  <span class="close1">×</span>
+  
+  <img class="modal-content1" id="img01">
+  <div id="caption"></div>
+</div>  
+		   	   <!-- Modal 2-->
+		   
+  <div class="modal fade_in3" id="myMod3" role="dialog1" >
+    <div class="modal-dialog3" >
+    
+      <!-- Modal content-->
+      <div class="modal-content3">
+        <div class="modal-header3">
+          <button type="button" class="close3" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title2">See what your food contains</h4></center>
+        </div>
+        <div class="modal-body3">
+		
+		  <div class="table-responsive">
+		  
+		 <table border="1" align="center" id="t1" class=" ">
+		 <thead><center>NUTRITION TABLE</center></thead>
+		 <thead><center>Servings:6   Serving size:380g</center></thead>
+		 <tbody>
+		 <th>  </th>
+		 <th>Average serve</th>
+		  <th>Average 100g</th>
+		 <tr>
+		 <td>Energy</td>
+		 <td>553KJ</td>
+		 <td>145KJ</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Calories</td>
+		 <td>132cal</td>
+		 <td>35cal</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Protein</td>
+		 <td>2.4g</td>
+		 <td>2.0g</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Fat total</td>
+		 <td>5.1g</td>
+		 <td>0.8</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>-saturated</td>
+		 <td>6.5g</td>
+		 <td>0.1g</td>
+		 
+		 
+		 </tr>
+<tr>
+		 <td>Carbohydrates</td>
+		 <td>14.5g</td>
+		 <td>3.8</td>
+		 
+		 
+		 </tr>		 
+		 <tr>
+		 <td>Sugars</td>
+		 <td>3.7g</td>
+		 <td>1.0g</td>
+		 
+		 
+		 </tr>		 
+		 <tr>
+		 <td>sodium</td>
+		 <td>480mg</td>
+		 <td>126mg</td>
+		 
+		 
+		 </tr>		 
+		 
+
+		 </tbody>
+		 </table>
+		  
+		  </div>
+        </div>
+        <div class="modal-footer3">
+          <button type="button" class="btn btn-default" data-dismiss="modal3">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+		  
+
+                 <div id="myModal3" class="modal3">
+  <span class="close3">×</span>
+  
+  <img class="modal-content3" id="img03">
+  <div id="caption3"></div>
+</div> 
+
+		   
+		   
+		   
+		   
+		   <div class="col-sm-12">
+          <div class="well" id="hol">
+		   
+		  
+		  <div class="row">
+		<div id="wrapper">
+	
+		  
+	<div class="col-sm-4">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-fade">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox" id="imageslide1">
+   
+
+    <div class="item active">
+      <img src="Images/l12.jpg" alt="Chania" width="100%" height="200px"  id="myImg1" data-toggle="modal" data-target="#myMod" data-animation="animated bounceInTop">
+    </div>
+
+    <div class="item">
+      <img src="Images/l13.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+
+    <div class="item">
+      <img src="Images/l14.jpg" alt="Flower" width="100%" height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	 <div class="item">
+      <img src="Images/l15.jpg" alt="Flower" width="100%"  height="200px" id="myImg1" data-toggle="modal" data-target="#myMod">
+    </div>
+	</div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		  
+		  <div class="text1">Check it's nutritional value</div>
+		  </div>
+		  </div>
+		  <div class="col-sm-8">
+		   <br><h2>
+		Breakfast Bruschetta</h2>
+		 <p>A great quick nutritious breakfast to make when you are in a hurry. You can use ricotta or cottage cheese if you like.<br/>
+    <p id="read_more4">Read More</p></p><br/>
+
+    <p id="more_text4" style="display:none">
+        Ingredients
+
+1 slice Ciabatta<br>
+3 tbsp. Ricotta, low fat<br>
+Drop of Vanilla Essence<br>
+1 tsp. Honey<br>
+Pinch of Cinnamon<br>
+3 Strawberries, sliced<br>
+½ Banana, sliced<br>
+
+Method<br>
+
+1)Lightly toast your ciabatta.<br>
+2)In a small bowl mix ricotta, a dribble of vanilla essence and cinnamon. Once mixed spread on your toast.<br>
+3)Place sliced banana and strawberries on top then drizzle a little honey over.<br>
+    </p>   </div>
+        </div>
+		</div>
+		</div>
+		  
+		   <div class="col-sm-12" id="resubmit">
+		   <div class="well" id="hol">
+		   
+  <h2>Submit your recipe</h2>
+  <form name="for11">
+   <div class="form-group">
+      <label for="firstname">Name:</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter Name" required>
+  
+   </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="emailre" placeholder="Enter email" required ng-pattern="/^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/"/>
+  
+   </div>
+	 
+				
+    <div class="form-group">
+      <label for="textarea">Write your recipe:</label>
+      <textarea cols="12" rows="5" class="form-control" id="commentForm" placeholder="Enter your recipe here:" required></textarea>
+    </div>
+   <div  class="form-group">
+    <input type="file" name="pic" accept="image/*" required>
+   </div>
+    <button type="button" id="subBtn" class="btn btn-success" onclick="myFun();">Submit</button>
+  </form>
+
+		   
+		   </div>
+		   
+		   
+		   </div>
+		   
+		  
+		
+      <div class="col-sm-3"> 
+  <!-- Trigger the modal with a button -->
+ <!-- <span class="glyphicon glyphicon-arrow-right" data-toggle="modal" data-target="#myModal"></span> -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p>Thank you for subscribing.</p>
+		  <p>Click below to download your copy of our free recipies
+		  
+        </div>
+		
+<img src="Images/drink1.jpg" id="lop" class="img-responsive" alt="Cinque Terre" width="254" height="236" style="margin-left:20px">
+<a href="rr.pptx" download> <button type="button" id="subb" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Download</button></a>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+      
+    </div>
+  </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="well" id="ll">
+      <h3 class="he1"> OUR LATEST VIDEO</h3>
+<iframe width="100%" height="360" id="ivideo" src="https://www.youtube.com/embed/yyEVI_5FU0Y" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+  <div class="well" id="subs">
+  <img src="Images/subs.jpg" width="100px"><br>
+       <input id='email' type='text' placeholder="enter your email">
+<p id="p3"></p>
+          <button id="submit" class="btn btn-success" data-animation="animated zoomInRight">enter</button>
+        </a>
+      
+  
+	   <strong><p style=color:#fda2b3>to get a free eCookbook with our top 25 recipes.<br><br></p></strong>
+    </div>
+   
+
+    
+
+  
+ 
+
+<div class="container">
+  <h3>Your Views</h3>  
+  
+  <br><br>
+ 
+	<div class="col-sm-4">
+	
+    
+	  
+	 <div class="well" id="co1">
+	 
+	  chris patt<br>
+      
+chr.12@yahoo.com<br>
+Your blog is amazing.<br> Wish to see some more delicious dishes 🙂<br>
+november 21st,2016<br>
+</div>
+<div ng-app="Lab8">
+<div class="well" id="co0">
+	<p>divya jain<br>
+	div@gmail.com<br>
+your dishes are just amazing<br>
+
+nov 26,2016
+</p>
+</div>
+
+	 <div class="well" id="co1">
+	  Maria Davis<br>
+      
+maria.gh@gmail.com<br>
+Amazing work 🙂
+<br>november 21st,2016<br>
+</div>
+	<div ng-controller="UserController as userCtrl">
+	<div ng-app="myApp" ng-controller="datCtrl">
+		<div ng-repeat="user in userCtrl.userAccount">
+			
+
+<div class="well" id="co1">
+
+<div id="b1">
+
+<br><br>
+</div>
+
+				{{user.firstname}}<br>
+				{{user.email}}<br>
+				
+				{{user.comments}}
+		
+			
+		<br>
+	{{today|date }}
+<br>
+	
+	
+<br>
+<br>
+	</div>
+	</div>
+	<form name="userForm" id="commentForm" ng-controller="AddController as addCtrl" ng-submit="addCtrl.addUser(userCtrl.userAccount)">
+		
+	
+	
+		
+		
+		
+            <div class="table-responsive">
+		  
+		 <table border="1" align="center" id="tab1" class="table">
+               <tr>
+			   <td>Enter your name:</td>
+                  <td><input name = "firstname"  type = "text" ng-model = "addCtrl.userAccount.firstname" required ng-pattern="/^[A-Za-z ]+$/"/>
+                     <span style = "color:red" ng-show = "userForm.firstname.$invalid">
+                        </span>
+					 <span style = "color:red" ng-show = "userForm.firstname.$invalid">
+					 <span
+                        ng-show="userForm.firstname.$error.pattern">Please enter a valid first name</span>
+						</span>
+                  </td>
+				  
+               </tr>
+               
+              <tr>
+                  <td>Email: </td>
+				  <td><input name = "email" type = "email" ng-model = "addCtrl.userAccount.email" length = "100" required ng-pattern="/^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/"/>
+                     <span style = "color:red" ng-show = "userForm.email.$invalid">
+                         </span>
+					 <span style = "color:red" ng-show = "userForm.email.$invalid">
+					 <span
+                        ng-show="userForm.email.$error.pattern">Please enter a valid email address</span>
+						</span>
+                  </td>
+               </tr>
+			   <div>
+			    <tr>
+				
+                  <td>Enter your comments: </td>
+                  <td><textarea name = "comments" cols="25" rows="10" wrap="hard"  ng-model = "addCtrl.userAccount.comments" required></textarea>
+                     <span style = "color:red" ng-show = "userForm.comments.$invalid">
+                           </span>
+					 <span style = "color:red" ng-show = "userForm.comments.$invalid">
+					
+                  </td>
+               </tr>
+			   </div>
+		</table>
+		</div>
+		<button class="btn btn-success" ng-disabled = "
+                        userForm.firstname.$invalid &&
+                        userForm.email.$invalid &&
+						userform.comments.$invalid" ng-click="submit()">Submit</button>
+		
+		
+		
+	</form>
+	
+	</div>
+	</div>
+</div>
+  
+ 
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+ <br><br>
+
+</div>
+
+</div>
+
+
+<!-- Container (Footer Section) -->
+<div  class="container-fluid" style ="background-color:#84a96c;color:black">
+  
+  <div class="row ">
+    <div class="col-xs-6 col-sm-2 text-center">
+		<ul class="menu">
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="blog.html">Food Blog</a></li>
+         <li><a href="health.html">Health</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-6  col-sm-2 text-center">
+		<ul class="menu" >
+        <li><a href="Terms.html">Terms and Conditions</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+		<li><a href="careers.html">Careers</a></li>
+        <li><a href="MyAccount.html">My Account</a></li>
+		<li><a href="#reviews">Reviews</a></li>
+		</ul>
+    </div>
+	<div class="col-xs-12 col-sm-4  text-center">
+      <p><b>Newsletter Sigup</b></p>
+      <p>Get notified each time we add our new recipe</p>
+      <form class="form-inline ">Sign up of News and offers
+    <br>
+   <input type="email" class="form-control"  placeholder="Email Address">
+   <button type="button" class="btn"><i class="fa fa-paper-plane"></i></button>
+ </form>
+    </div>
+	<div class=" col-xs-12 col-sm-4 text-right contactFitfoodie" >
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span><a href="tel:+00 1515151515">+00 1515151515</a></p>
+      <p><span class="glyphicon glyphicon-envelope"></span><a href="mailto:contact@fitfoodie.com"> contact@fitfoodie.com </a></p>
+    </div>
+  </div>
+<br>
+ <div class="row ">
+    
+<div class="col-xs-12 col-sm-12 text-center">&copy; 2016 FitFoodie. All rights reserved 
+</div>
+</div>
+<div class="socialDiv" >
+	<ul class="social">
+    <li><a href="https://twitter.com/fitfoodie" title="Twitter" >
+		<i class="fa fa-twitter-square fa-2x"  ></i>
+        </a></li>
+	<li><a href="https://www.facebook.com/fitfoodie" title="Facebook"  >
+		<i class="fa fa-facebook-square fa-2x" ></i>
+        </a></li>
+    <li><a href="https://www.instagram.com/fitfoodie" title="Instagram" >
+		<i class="fa fa-instagram fa-2x"  ></i>
+        </a></li>
+    <li><a href="https://in.pinterest.com/fitfoodie" title="Pinterest" >
+		<i class="fa fa-pinterest-square fa-2x"></i>
+        </a></li>
+	<li><a href="https://www.snapchat.com/fitfoodie" title="Snapchat">
+		<i class="fa fa-snapchat-square fa-2x" ></i>
+        </a>
+	</li>
+  </ul>
+</div>
+
+<script>
+
+
+/*
+
+var modal1 = document.getElementById('myModal1');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img1 = document.getElementById('myImg1');
+var modalImg1 = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img1.onclick = function(){
+    modal1.style.display = "block";
+    modalImg1.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close1")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal1.style.display = "none";
+}
+*/
+</script>
+
+
+
+</body>
+</html>
+
